@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Apotek Sepakat</title>
+  <title>Sebiru Renjana</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -15,7 +15,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('assets-admin/dist/css/adminlte.min.css') }}">
 
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
   <link rel="icon" href="{{ asset('assets-admin/dist/img/apotek.png') }}" type="image/x-icon">
 
@@ -24,11 +24,11 @@
 
   @stack('css')
       <!-- sweet alert  -->
-    
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
       <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" />
-  
+
 
    <!-- DataTables -->
    <link rel="stylesheet" href="{{ asset('assets-admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
@@ -53,7 +53,7 @@
 
   <!-- Preloader -->
   {{-- <div class="preloader flex-column justify-content-center align-items-center">
-    
+
   </div> --}}
 
   <!-- Navbar -->
@@ -63,7 +63,7 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-     
+
     </ul>
 
     <!-- Right navbar links -->
@@ -71,15 +71,15 @@
       <!-- Navbar Search -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <button class="btn btn-success mr-2 mb-3"> 
+          <button class="btn btn-success mr-2 mb-3">
             <i class="fas fa-user fa-fw" aria-hidden="true"></i>
             <strong style="color:white;">{{ auth()->user()->name }}</strong>
-          
+
           </button>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        
-       
+
+
           <div class="dropdown-divider"></div>
           <a href="/ubahpassword" class="dropdown-item">
             <i class="fas fa-cog mr-2"></i> Ubah Password
@@ -92,24 +92,24 @@
       </li>
       {{-- <li class="nav-item">
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="/logout" id="logout" class="btn btn-danger mr-3"> 
+          <a href="/logout" id="logout" class="btn btn-danger mr-3">
             <i class="fas fa-user fa-fw" aria-hidden="true"></i>
             <strong style="color:white;">Logout</strong>
-          
+
           </a>
         </li>
       </li> --}}
 
       <!-- Messages Dropdown Menu -->
-      
+
       <!-- Notifications Dropdown Menu -->
-     
-      
+
+
     </ul>
   </nav>
   <!-- /.navbar -->
 
-  
+
   @include('layouts-admin.sidebar')
   @include('sweetalert::alert')
 
@@ -122,7 +122,7 @@
     <div class="bg-black-op">
       <div class="content content-top text-center">
         <div class="pxy-9">
-          <h3 style="color:white"><br>{{ $title }} </h3>     <br>         
+          <h3 style="color:white"><br>{{ $title }} </h3>     <br>
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@
 
 
     @yield('container')
-   
+
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
