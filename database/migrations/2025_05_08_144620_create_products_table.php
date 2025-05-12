@@ -17,11 +17,12 @@ return new class extends Migration
             $table->string('kode')->unique();
             $table->string('category');
             $table->integer('price');
-            $table->integer('active')->default(1);
+            $table->integer('special_price')->nullable();
             $table->integer('stock')->default(0);
+            $table->string('satuan')->nullable();
             $table->string('image')->nullable();
             $table->string('description')->nullable();
-            $table->string('unit')->nullable();
+            $table->integer('active')->default(1);
             $table->timestamps();
         });
     }

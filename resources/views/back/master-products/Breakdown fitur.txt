@@ -1,0 +1,23 @@
+admin :
+manajemen pengguna ( multi level user ),
+manajemen customer,
+manajemen product,
+manajemen transaksi,
+semua laporan,
+dashboard -> visualisasi top seller product bulanan, harian atau tahunan
+          -> jumlah transaksi
+          -> Total Pemasukan (Rp.)
+          -> dll
+generate qrcode meja dine in -> proses pemesanan akan lebih ringkas
+
+kasir :
+manajemen transaksi
+push notifikasi ke customer kalau pesanan sudah diorder, sedang diproses, selesai
+
+customer
+sign in / sign up via google account,
+melakukan pembelian product
+bisa melihat status pesanan
+
+Order Page ( 1st priority )
+landing page

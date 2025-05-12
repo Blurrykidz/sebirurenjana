@@ -19,13 +19,14 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
+       $remember = $request->has('remember');
        $credentials = $request->validate([
             'username'  => 'required|max:18|min:4',
             'password'  => 'required'
         ]);
         $credentials['aktif'] = 1;
 
-        if(Auth::attempt($credentials))
+        if(Auth::attempt($credentials, $remember))
         {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');

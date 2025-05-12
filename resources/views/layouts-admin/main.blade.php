@@ -17,16 +17,18 @@
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
-  <link rel="icon" href="{{ asset('assets-admin/dist/img/apotek.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ asset('assets-admin/dist/img/sebirurenjanablue.jpg') }}" type="image/x-icon">
 
   <link rel="stylesheet" href="{{ asset('assets-admin/plugins/select2/css/select2.min.css') }}">
   <link rel="stylesheet" href="{{ asset('assets-admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 
   @stack('css')
       <!-- sweet alert  -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <link rel="stylesheet" href="https://lipis.github.io/bootstrap-sweetalert/dist/sweetalert.css" />
 
 

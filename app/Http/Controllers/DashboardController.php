@@ -13,8 +13,8 @@ class DashboardController extends Controller
 
         return view('back.dashboard',[
             "nama"   => $nama,
-            'level' => auth()->user()->level,
-            'title' => "Dashboard"
+            'level'  => auth()->user()->level,
+            'title'  => "Dashboard"
         ]);
     }
 }

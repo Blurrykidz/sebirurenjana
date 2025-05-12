@@ -8,7 +8,7 @@
           <img src="{{ asset('assets-admin/dist/img/Kota_Bengkulu.png')}}" class="img-circle elevation-2" alt="User Image">
         </div> --}}
         <div class="image">
-         <img src="{{ asset('assets-admin/dist/img/apotek.png')}}" class="mt-2 mb-4" style="display: block;margin-left: auto;margin-right: auto;height: 40px;width:auto">
+         <img src="{{ asset('assets-admin/dist/img/sebirurenjanablue.jpg') }}" class="mt-2 mb-4" style="display: block;margin-left: auto;margin-right: auto;height: 40px;width:auto;border-radius: 10px;">
         </div>
         <div class="info mt-3">
          <h6 style="text-align: center;color: black">{{ ucfirst($nama) }}</h6>
@@ -40,18 +40,18 @@
                 Dashboard
                 {{-- <i class="right fas fa-angle-left"></i> --}}
               </p>
-            </a>            
+            </a>
           </li>
 
-  @if(auth()->user()->level == 1)          
-          
+  @if(auth()->user()->level == 1)
+
           <li class="nav-header" style="font-weight: bold">SUPER ADMIN PANEL</li>
-          
+
           <li class="nav-item">
             <a class="{{ Request::is('pengguna') ? 'nav-link active' : 'nav-link' }}" href="/pengguna">
               <i class="nav-icon fas fa-user"></i>
-           
-       
+
+
               <p>
                 Data Pengguna
                 {{-- <span class="right badge badge-danger">New</span> --}}
@@ -77,18 +77,18 @@
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li>     
+          </li>
 
           <li class="nav-item">
-            <a class="{{ Request::is('master-barang') ? 'nav-link active' : 'nav-link' }}" href="/master-barang">
+            <a class="{{ Request::is('master-product') ? 'nav-link active' : 'nav-link' }}" href="/master-product">
               <i class="nav-icon fas fa-warehouse"></i>
               <p>
-                Master Barang
+                Master Produk
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
           </li>
-          
+
        <li class="nav-item">
           <a class="{{ Request::is('kebutuhan-barang') ? 'nav-link active' : 'nav-link' }}" href="/kebutuhan-barang">
             <i class="nav-icon fas fa-notes-medical"></i>
@@ -97,7 +97,7 @@
             </p>
           </a>
         </li>
-        
+
          <li class="nav-item">
           <a class="{{ Request::is('passive-stok') ? 'nav-link active' : 'nav-link' }}" href="/passive-stok">
             <i class="nav-icon fas fa-file-medical-alt"></i>
@@ -119,7 +119,7 @@
             </a>
           </li>
 
-          
+
           <li class="nav-item">
             <a class="{{ Request::is('barangmasuks/dist') ? 'nav-link active' : 'nav-link' }}" href="/barangmasuks/dist">
               <i class="nav-icon fas fa-shopping-cart"></i>
@@ -129,8 +129,8 @@
               </p>
             </a>
           </li>
-          
-          
+
+
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-exchange-alt"></i>
@@ -151,32 +151,32 @@
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li> 
+          </li>
 
           <li class="nav-item">
             <a class="{{ Request::is('retur-barangs/pembelian') ? 'nav-link active' : 'nav-link' }}" href="/retur-barangs/pembelian">
               <i class="far fa-circle nav-icon"></i>
-              
+
               <p>
                 Retur Barang Masuk
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li> 
+          </li>
         </li>
           </ul>
-          
+
 
           {{-- <li class="nav-item">
             <a class="{{ Request::is('barangmasuk') ? 'nav-link active' : 'nav-link' }}" href="/barangmasuk">
               <i class="nav-icon fas fa-business-time"></i>
               <p>
-                Data All Pembelian                
+                Data All Pembelian
               </p>
             </a>
           </li> --}}
-      
-      
+
+
       <li class="nav-header" style="color: green; font-weight:bold ">PENCARIAN PANEL</li>
 
           <li class="nav-item">
@@ -187,8 +187,8 @@
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li>  
-          
+          </li>
+
             <li class="nav-item">
             <a class="{{ Request::is('all-penjualan') ? 'nav-link active' : 'nav-link' }}" href="/all-penjualan">
               <i class="nav-icon fas fa-search"></i>
@@ -199,8 +199,8 @@
             </a>
           </li>
 
-          
-          
+
+
           <li class="nav-header" style="color: green; font-weight:bold ">REPORT PANEL</li>
 
           <li class="nav-item">
@@ -211,17 +211,17 @@
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li>  
+          </li>
 
           {{-- <li class="nav-item">
             <a class="{{ Request::is('kartu-stok') ? 'nav-link active' : 'nav-link' }}" href="/kartu-stok">
               <i class="nav-icon fas fa-credit-card"></i>
               <p>
-                Kartu Stok                
+                Kartu Stok
               </p>
             </a>
           </li>   --}}
-          
+
           <li class="nav-item">
             <a class="{{ Request::is('barangmasuks/report') ? 'nav-link active' : 'nav-link' }}" href="/barangmasuks/report">
               <i class="nav-icon fas fa-book"></i>
@@ -230,7 +230,7 @@
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li>  
+          </li>
 
           <li class="nav-item">
             <a class="{{ Request::is('penjualans/report') ? 'nav-link active' : 'nav-link' }}" href="/penjualans/report">
@@ -240,7 +240,7 @@
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li>  
+          </li>
 
           @else
           <li class="nav-header" style="color: green; font-weight:bold ">PEGAWAI PANEL</li>
@@ -254,7 +254,7 @@
               </p>
             </a>
           </li>
-          
+
             <li class="nav-item">
             <a class="{{ Request::is('retur-barang/penjualan') ? 'nav-link active' : 'nav-link' }}" href="/retur-barang/penjualan">
               <i class="far fa-circle nav-icon"></i>
@@ -264,9 +264,9 @@
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
-          </li> 
+          </li>
 
-          
+
             <li class="nav-item">
             <a class="{{ Request::is('all-penjualan') ? 'nav-link active' : 'nav-link' }}" href="/all-penjualan">
               <i class="nav-icon fas fa-search"></i>
@@ -276,8 +276,8 @@
               </p>
             </a>
           </li>
-          
-          
+
+
           @endif
 
         </ul>

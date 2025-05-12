@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Satuan;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,7 +13,15 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::paginate(20);;
+
+        return view('back.master-products.index', [
+            'title'            => "Master Barang",
+            "products"         =>  $products,
+            "satuan"           =>  Satuan::where('active','=',1)->get(),
+            "nama"             =>  auth()->user()->name,
+            "level"            =>  auth()->user()->level,
+        ]);
     }
 
     /**
