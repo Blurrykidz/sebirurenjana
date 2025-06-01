@@ -112,7 +112,7 @@
   <!-- /.navbar -->
 
 
-  @include('layouts-admin.sidebar')
+  @include('back.layouts-admin.sidebar')
   @include('sweetalert::alert')
 
 

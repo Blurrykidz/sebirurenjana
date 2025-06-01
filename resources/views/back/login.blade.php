@@ -1,7 +1,9 @@
-@extends('layouts-admin.mainlogin')
+@extends('back.layouts-admin.mainlogin')
 
 @section('container')
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 @include('sweetalert::alert')
 
 <div class="login-box">

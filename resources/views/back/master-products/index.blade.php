@@ -1,4 +1,4 @@
-@extends('layouts-admin.main')
+@extends('back.layouts-admin.main')
 
 @section('container')
 
@@ -59,8 +59,6 @@
           <div class="card">
 
                 <div class="card-body table-responsive p-0">
-
-
                     <hr>
                   <table class="table table-hover text-nowrap">
                   <thead>

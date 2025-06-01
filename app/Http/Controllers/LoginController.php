@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\User;
 
 
 class LoginController extends Controller
@@ -19,23 +19,29 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-       $remember = $request->has('remember');
-       $credentials = $request->validate([
-            'username'  => 'required|max:18|min:4',
-            'password'  => 'required'
-        ]);
-        $credentials['aktif'] = 1;
+        $remember = $request->has('remember');
 
-        if(Auth::attempt($credentials, $remember))
-        {
+        $credentials = $request->validate([
+            'username' => 'required|max:18|min:4',
+            'password' => 'required',
+        ]);
+
+        // Tambah filter aktif di database query secara manual
+        if (Auth::attempt(['username' => $credentials['username'], 'password' => $credentials['password'], 'aktif' => 1], $remember)) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
         }
 
-        toast('Login Gagal, Username atau Password salah!','error','top-right');
-        return back();
+        // Jika user ditemukan tapi tidak aktif
+        $user = User::where('username', $credentials['username'])->first();
+        if ($user && $user->aktif != 1) {
+            toast('Login Gagal, Akun anda tidak aktif!', 'error')->position('top-end');
+            return back();
+        }
 
-        // return back()->with('error', ' Login Gagal, Username atau Password salah');
+        // Jika username/password salah
+        toast('Login Gagal, Username atau Password salah!', 'error')->position('top-end');
+        return back();
     }
 
     public function logout(Request $request)

@@ -1,4 +1,4 @@
-@extends('layouts-admin.main')
+@extends('back.layouts-admin.main')
 
 @section('container')
 
@@ -8,14 +8,14 @@
 <!-- Select2 -->
 <link rel="stylesheet" href="{{ asset('assets-admin/plugins/select2/css/select2.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets-admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
- 
+
  <!-- Main content -->
  <section class="content">
     <div class="container-fluid">
       <!-- SELECT2 EXAMPLE -->
       <div class="card card-default">
         <div class="card-header">
-          
+
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -44,47 +44,47 @@
             @endif
               <div class="form-group">
                 <label>Nama</label>
-                <input type="text" class="js-maxlength form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $user->name) }}" required autofocus>                  
-                <input type="hidden" class="js-maxlength form-control @error('id') is-invalid @enderror" id="id" name="id" value="{{ old('id', $user->id) }}" required autofocus>                  
-              
+                <input type="text" class="js-maxlength form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $user->name) }}" required autofocus>
+                <input type="hidden" class="js-maxlength form-control @error('id') is-invalid @enderror" id="id" name="id" value="{{ old('id', $user->id) }}" required autofocus>
+
                  @error('name')
-        
+
                  <div class="invalid-feedback">
-     
+
                    {{ $message }}
-     
+
                  </div>
-                     
+
                  @enderror
                 </div>
 
                 <div class="form-group">
                   <label>NIP</label>
-                  <input type="text" class="js-maxlength form-control @error('nip') is-invalid @enderror" id="nip" name="nip" value="{{ old('nip', $user->nip) }}" required autofocus>                  
-           
+                  <input type="text" class="js-maxlength form-control @error('nip') is-invalid @enderror" id="nip" name="nip" value="{{ old('nip', $user->nip) }}" required autofocus>
+
                    @error('nip')
-          
+
                    <div class="invalid-feedback">
-       
+
                      {{ $message }}
-       
+
                    </div>
-                       
+
                    @enderror
                   </div>
               <!-- /.form-group -->
               <div class="form-group">
                 <label>Email</label>
-                <input type="text" class="js-maxlength form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email', $user->email) }}" required autofocus>                  
-         
+                <input type="text" class="js-maxlength form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email', $user->email) }}" required autofocus>
+
                  @error('email')
-        
+
                  <div class="invalid-feedback">
-     
+
                    {{ $message }}
-     
+
                  </div>
-                     
+
                  @enderror
                 </div>
               <!-- /.form-group -->
@@ -93,34 +93,34 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Level</label>
-                    <select class="form-control select2bs4 @error('level') is-invalid @enderror" style="width: 100%;" id="level" name="level">                  
-                        <option value=""> -- Pilih Hari -- </option>    
+                    <select class="form-control select2bs4 @error('level') is-invalid @enderror" style="width: 100%;" id="level" name="level">
+                        <option value=""> -- Pilih Hari -- </option>
                         <option value="1"   {{ $user->level == "1" ? 'selected' : '' }}>ADMIN</option>
                         <option value="2" {{ $user->level == "2" ? 'selected' : '' }}>PEGAWAI</option>
                         <option value="3" {{ $user->level == "3" ? 'selected' : '' }}>KASUBAG TU</option>
                         <option value="4" {{ $user->level == "4" ? 'selected' : '' }}>SEKDIS</option>
                         <option value="5" {{ $user->level == "5" ? 'selected' : '' }}>KEPALA DINAS</option>
-                      </select>                 
+                      </select>
                   </div>
               <!-- /.form-group -->
               <div class="form-group">
                 <label>Aktif</label>
 
-                <select class="form-control select2bs4 @error('aktif') is-invalid @enderror" style="width: 100%;" id="aktif" name="aktif">                  
-                    <option value=""> -- Status Aktif -- </option>    
+                <select class="form-control select2bs4 @error('aktif') is-invalid @enderror" style="width: 100%;" id="aktif" name="aktif">
+                    <option value=""> -- Status Aktif -- </option>
                     <option value="1" {{ $user->aktif == "1" ? 'selected' : '' }}>Aktif</option>
                     <option value="0" {{ $user->aktif == "0" ? 'selected' : '' }}>Tidak Aktif</option>
-                  </select>                 
-              </div>          
+                  </select>
+              </div>
               <!-- /.form-group -->
             </div>
             <!-- /.col -->
           </div>
           <!-- /.row -->
         </div>
-        <div class="mb-3"> 
+        <div class="mb-3">
 <center>
-        <button type="submit" class="btn btn-warning ml-6">Update</button>        
+        <button type="submit" class="btn btn-warning ml-6">Update</button>
 </center>
 </div>
     </form>
@@ -131,7 +131,7 @@
       </div>
       <!-- /.card -->
 
-     
+
       </div>
       <!-- /.row -->
     </div>
